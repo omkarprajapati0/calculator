@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/6736/6736519.png">
+    <title>Calculator</title>
+     <style>
+        body{
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin: 20px;
+    padding: 20px;
+}
+.main{
+    /* height: 400px; */
+    width: 300px;
+    align-items: center; 
+    justify-content: center;
+    margin: auto;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;      
+
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+#display{
+    width: 80%;
+
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10%;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.btn{
+    width: 75px;
+    height: 60px;
+    font-size: 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #b5b5b5;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+
+    transform: scale(1);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(69, 81, 80, 0.832)    ;
+  
+
+
+}
+
+.btn:hover{
+    background-color: #454444;
+    color: white;
+    box-shadow: 0 4px 80px rgba(31, 34, 34, 0.832)    ;
+}
+@media  (max-width: 400px) {
+    body{
+        margin: 0px;
+    }
+    .main {
+       /* margin-top: 30px; */
+       width:90%;
+    }
+    .btn {
+        width: 76px;
+        height: 70px;
+        font-size: 35px;
+        margin: 12px;
+       }
+    #display {
+        font-size: 19px;
+        padding: 9%;
+    }
+}
+     </style>
+     
+</head>
+<body>
+    <div class="main">
+        <h1>Simple Calculator</h1>
+        <div>
+              <input type="text" id="display" readonly>
+              <div class="buttons">
+                <button class="btn" onClick="currentDisplay= '' 
+                document.querySelector('#display').value = currentDisplay;" >C</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '1';
+                document.querySelector('#display').value = currentDisplay;" >1</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '2';
+                document.querySelector('#display').value = currentDisplay;" >2</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '+';
+                document.querySelector('#display').value = currentDisplay;" >+</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '3';
+                document.querySelector('#display').value = currentDisplay;" >3</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '4';
+                document.querySelector('#display').value = currentDisplay;" >4</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '-';
+                document.querySelector('#display').value = currentDisplay;" >-</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '5';
+                document.querySelector('#display').value = currentDisplay;" >5</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '6';
+                document.querySelector('#display').value = currentDisplay;" >6</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '*';
+                document.querySelector('#display').value = currentDisplay;" >*</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '7';
+                document.querySelector('#display').value = currentDisplay;" >7</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '8';
+                document.querySelector('#display').value = currentDisplay;" >8</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '/';
+                document.querySelector('#display').value = currentDisplay;" >/</button>
+                <button class="btn" onclick="currentDisplay = eval(currentDisplay);
+                document.querySelector('#display').value = currentDisplay;" >=</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '9';
+                document.querySelector('#display').value = currentDisplay;" >9</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '0';
+                document.querySelector('#display').value = currentDisplay;" >0</button>
+                <button class="btn" onclick="currentDisplay =currentDisplay + '.';
+                document.querySelector('#display').value = currentDisplay;" >.</button>
+              </div>
+               
+        </div>     
+                
+                
+
+      
+  
+
+
+    
+
+    </div>
+    <script>
+      let currentDisplay = '';
+      document.querySelector("#display").value = currentDisplay;
+      
+         </script>
+</body>
+</html>
